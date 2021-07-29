@@ -4,6 +4,21 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
+  - name: "settings"
+    label: "Settings"
+    files:
+    - label: "Site options"
+      name: "site_options"
+      file: "settings/settings.md"
+      fields:
+        - { label: "Site name", name: "site_name", widget: "string"}
+        - { label: "Site credits", name: "site_credits", widget: "string"}
+        - label: "Social networks"
+          name: "social_networks"
+          widget: list
+          fields:
+            - { label: "Network", name: "network", widget: "string" }
+            - { label: "Link", name: "link", widget: "string" }
   - name: "pages"
     label: "Pages"
     files:
@@ -14,11 +29,11 @@ collections:
         - { label: "Title", name: "title", widget: "string"}
         - { label: "Subtitle", name: "subtitle", widget: "text"}
         - label: "Featured work"
-          name: "featuredWork"
+          name: "featured_work"
           widget: "relation"
-          collection: "work"
-          search_fields: [ "workList.title" ]
-          value_field: "workList.title"
+          collection: "pages"
+          search_fields: [ "work.work_list.title" ]
+          value_field: "work.work_list.title"
           multiple: true
           max: 2
     - label: "About"
@@ -34,7 +49,7 @@ collections:
         - { label: "Title", name: "title", widget: "string"}
         - { label: "Subtitle", name: "subtitle", widget: "text"}
         - label: "Work List"
-          name: "workList"
+          name: "work_list"
           widget: list
           fields:
             - { label: "Name", name: "name", widget: "string" }

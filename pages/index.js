@@ -2,9 +2,9 @@ import Head from 'next/head';
 import { attributes } from '../content/home.md';
 
 const Home = () => {
-    let { title, subtitle, featuredWork } = attributes;
+    let { title, subtitle, featured_work } = attributes;
 
-    console.log(featuredWork);
+    console.log(featured_work);
 
     return (
         <>
@@ -15,7 +15,7 @@ const Home = () => {
                 <h1 className={'u-a2'}>{title}</h1>
                 <p className="u-b0">{subtitle}</p>
                 <ul>
-                    {featuredWork.map((workItem, k) => (
+                    {featured_work.map((workItem, k) => (
                         <li key={k}>
                             <h2>{workItem.name}</h2>
                             <p>{workItem.description}</p>
