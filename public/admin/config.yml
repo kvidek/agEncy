@@ -56,10 +56,11 @@ collections:
         - { label: "Subtitle", name: "subtitle", widget: "text"}
   - name: "work_posts"
     label: "Work posts"
-    files:
-    - label: "Work post"
-      name: "work_post"
-      file: "content/work_posts.md"
-      fields:
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "Subtitle", name: "subtitle", widget: "text" }
+    folder: 'content/workPosts'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "text" }
+      - { label: 'Image', name: 'thumbnail', widget: 'image', required: true }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: true }
