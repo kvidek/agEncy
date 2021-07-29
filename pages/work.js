@@ -1,24 +1,64 @@
 import Meta from '../components/Meta';
-import { attributes } from '../content/work_posts.md';
+import 'isomorphic-fetch';
+import Link from 'next/link';
+import { attributes } from '../content/work.md';
 
-const work = () => {
-    let { title, subtitle, work_posts } = attributes;
+const importWorkPosts = async () => {
+    // https://medium.com/@shawnstern/importing-multiple-markdown-files-into-a-react-component-with-webpack-7548559fce6f
+    // second flag in require.context function is if subdirectories should be searched
+    const markdownFiles = require
+        .context('../content/workPosts', false, /\.md$/)
+        .keys()
+        .map(relativePath => relativePath.substring(2));
+
+    return Promise.all(
+        markdownFiles.map(async path => {
+            const markdown = await import(`../content/workPosts/${path}`);
+            return { ...markdown, slug: path.substring(0, path.length - 3) };
+        })
+    );
+};
+
+const work = ({ postList }) => {
+    let { title, subtitle } = attributes;
+
+    console.log(postList);
 
     return (
         <div>
             <Meta title="Work" />
             <h1 className={'u-a2'}>{title}</h1>
             <p className="u-b0">{subtitle}</p>
-            <ul>
-                {work_posts.map((workItem, k) => (
-                    <li key={k}>
-                        <h2>{workItem.name}</h2>
-                        <p>{workItem.description}</p>
-                    </li>
-                ))}
-            </ul>
+
+            <div>
+                {postList && (
+                    <ul>
+                        {postList.map((post, k) => {
+                            return (
+                                <Link key={k} href={`work/${post.slug}`}>
+                                    <a>
+                                        <h3>{post.attributes.title}</h3>
+                                        <img
+                                            style={{ width: '320px' }}
+                                            src={post.attributes.image}
+                                            alt={post.attributes.title}
+                                        />
+                                    </a>
+                                </Link>
+                            );
+                        })}
+                    </ul>
+                )}
+            </div>
         </div>
     );
+};
+
+work.getInitialProps = async () => {
+    console.log('getInitialProps');
+
+    const postList = await importWorkPosts();
+    return { postList };
 };
 
 export default work;

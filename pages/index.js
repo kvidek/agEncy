@@ -4,8 +4,6 @@ import { attributes } from '../content/home.md';
 const Home = () => {
     let { title, subtitle, featured_work } = attributes;
 
-    console.log(featured_work);
-
     return (
         <>
             <Head title={'agEncy'}>
@@ -14,14 +12,16 @@ const Home = () => {
             <div>
                 <h1 className={'u-a2'}>{title}</h1>
                 <p className="u-b0">{subtitle}</p>
-                <ul>
-                    {featured_work.map((workItem, k) => (
-                        <li key={k}>
-                            <h2>{workItem.name}</h2>
-                            <p>{workItem.description}</p>
-                        </li>
-                    ))}
-                </ul>
+                {featured_work && (
+                    <ul>
+                        {featured_work.map((workItem, k) => (
+                            <li key={k}>
+                                <h2>{workItem.name}</h2>
+                                <p>{workItem.description}</p>
+                            </li>
+                        ))}
+                    </ul>
+                )}
             </div>
         </>
     );

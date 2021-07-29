@@ -1,14 +1,3 @@
-// module.exports = {
-//     webpack: cfg => {
-//         cfg.module.rules.push({
-//             test: /\.md$/,
-//             loader: 'frontmatter-markdown-loader',
-//             options: { mode: ['react-component'] },
-//         });
-//         return cfg;
-//     },
-// };
-
 const fs = require('fs');
 const blogPostsFolder = './content/workPosts';
 
@@ -35,7 +24,8 @@ module.exports = {
     webpack: configuration => {
         configuration.module.rules.push({
             test: /\.md$/,
-            use: 'frontmatter-markdown-loader',
+            loader: 'frontmatter-markdown-loader',
+            options: { mode: ['react-component'] },
         });
         return configuration;
     },
