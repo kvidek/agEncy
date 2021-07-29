@@ -1,0 +1,45 @@
+/**
+ * Colors
+ */
+$white: #ffffff;
+$black: #161c25;
+$sky: #273447;
+$black-0: rgba(#000000, 0);
+$black-10: rgba(#000000, 0.1);
+$black-20: rgba(#000000, 0.2);
+$black-30: rgba(#000000, 0.3);
+$black-40: rgba(#000000, 0.4);
+$black-50: rgba(#000000, 0.5);
+$black-60: rgba(#000000, 0.6);
+$black-70: rgba(#000000, 0.7);
+$black-80: rgba(#000000, 0.8);
+$black-90: rgba(#000000, 0.9);
+$black-100: rgba(#000000, 1);
+$mango: #f7b334;
+$slate: #3c5163;
+$grey: #d5d9dd;
+$light-grey: #e8ebed;
+$dark-grey: #7b8692;
+
+/**
+ * Colors - focus accessibility
+ */
+$focus-indicator-divider-color: $white;
+$focus-indicator-color: $black;
+
+/**
+ * Colors - re-assigning
+ */
+$primary-color: $sky;
+$secondary-color: $slate;
+$tertiary-color: $white;
+$dark-color: $black;
+$disabled-color: $light-grey;
+
+/**
+ * Colors - components
+ */
+$border-color: $grey;
+$button-color: $dark-grey;
+$input-color: $dark-grey;
+$select-color: $primary-color;

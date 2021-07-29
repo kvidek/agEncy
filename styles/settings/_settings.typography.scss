@@ -1,0 +1,46 @@
+/**
+ * Roboto
+ */
+@include font-face('InterRegular', 'Inter-Regular');
+@include font-face('InterBold', 'Inter-Bold');
+@include font-face('DomineRegular', 'Domine-Regular');
+
+/**
+ * Font variables
+ */
+$inter-regular: 'InterRegular', sans-serif;
+$inter-bold: 'InterBold', sans-serif;
+$domine: 'DomineRegular', serif;
+$font-primary: $inter-regular;
+$font-primary--bold: $inter-bold;
+$font-secondary: $domine;
+
+/**
+ * Font size map
+ */
+$settings-typography: (
+    'a2': (
+        $breakpoint-sm: 30px,
+        $breakpoint-xl: 30px,
+    ),
+    'a1': (
+        $breakpoint-sm: 14px,
+        $breakpoint-xl: 14px,
+    ),
+    'b0': (
+        $breakpoint-sm: 13px,
+        $breakpoint-xl: 13px,
+    ),
+    'b1': (
+        $breakpoint-sm: 12px,
+        $breakpoint-xl: 12px,
+    ),
+    'b2': (
+        $breakpoint-sm: 11px,
+        $breakpoint-xl: 11px,
+    ),
+    'b3': (
+        $breakpoint-sm: 10px,
+        $breakpoint-xl: 10px,
+    ),
+);

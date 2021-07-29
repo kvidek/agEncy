@@ -1,0 +1,28 @@
+{
+  "name": "agency",
+  "version": "1.0.0",
+  "description": "agEncy ",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "npm run build && next export"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bornfight/b-reset": "^1.0.8",
+    "next": "^11.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-react": "^7.14.5",
+    "frontmatter-markdown-loader": "^3.6.3",
+    "poly-fluid-sizing": "^1.1.0",
+    "sass": "^1.32.8"
+  }
+}
