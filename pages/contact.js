@@ -6,7 +6,7 @@ const contact = () => {
             <Meta title="Contact" />
             <h1 className="u-a2">Contact</h1>
         </div>
-    )
-}
+    );
+};
 
 export default contact;

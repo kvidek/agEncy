@@ -7,13 +7,11 @@ const Layout = ({ children }) => {
         <>
             <Meta />
             <Nav />
-            <main className={styles["o-page"]}>
-                <div className={styles["o-page__inner"]}>
-                    {children}
-                </div>
+            <main className={styles['o-page']}>
+                <div className={styles['o-page__inner']}>{children}</div>
             </main>
         </>
-    )
-}
+    );
+};
 
-export default Layout
+export default Layout;

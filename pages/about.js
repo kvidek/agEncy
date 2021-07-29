@@ -6,7 +6,7 @@ const about = () => {
             <Meta title="About" />
             <h1 className="u-a2">About</h1>
         </div>
-    )
-}
+    );
+};
 
 export default about;

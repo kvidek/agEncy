@@ -6,11 +6,11 @@ const Home = () => {
 
     return (
         <>
-            <Head title={"agEncy"}>
+            <Head title={'agEncy'}>
                 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
             </Head>
             <article>
-                <h1 className={"u-a2"}>{title}</h1>
+                <h1 className={'u-a2'}>{title}</h1>
                 <ul>
                     {cats.map((cat, k) => (
                         <li key={k}>
@@ -21,7 +21,7 @@ const Home = () => {
                 </ul>
             </article>
         </>
-    )
-}
+    );
+};
 
 export default Home;
