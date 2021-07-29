@@ -1,5 +1,5 @@
 backend:
-  name: test-repo #git-gateway
+  name: git-gateway #git-gateway || test-repo
   branch: master
 media_folder: public/img
 public_folder: img
@@ -13,12 +13,14 @@ collections:
       fields:
         - { label: "Title", name: "title", widget: "string"}
         - { label: "Subtitle", name: "subtitle", widget: "text"}
-        - label: "Featured Work"
-          name: "featured-work"
-          widget: list
-          fields:
-            - { label: "Name", name: "name", widget: "string"}
-            - { label: "Description", name: "description", widget: "text"}
+        - label: "Featured work"
+          name: "featuredWork"
+          widget: "relation"
+          collection: "work"
+          search_fields: [ "workList.title" ]
+          value_field: "workList.title"
+          multiple: true
+          max: 2
     - label: "About"
       name: "about"
       file: "content/about.md"

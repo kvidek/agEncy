@@ -4,6 +4,8 @@ import { attributes } from '../content/home.md';
 const Home = () => {
     let { title, subtitle, featuredWork } = attributes;
 
+    console.log(featuredWork);
+
     return (
         <>
             <Head title={'agEncy'}>
