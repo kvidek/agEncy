@@ -12,11 +12,34 @@ collections:
       file: "content/home.md"
       fields:
         - { label: "Title", name: "title", widget: "string"}
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Body", name: "body", widget: "markdown"}
-        - label: 'Cats'
-          name: "cats"
+        - { label: "Subtitle", name: "subtitle", widget: "text"}
+        - label: "Featured Work"
+          name: "featured-work"
           widget: list
           fields:
             - { label: "Name", name: "name", widget: "string"}
             - { label: "Description", name: "description", widget: "text"}
+    - label: "About"
+      name: "about"
+      file: "content/about.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Subtitle", name: "subtitle", widget: "text"}
+    - label: "Work"
+      name: "work"
+      file: "content/work.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Subtitle", name: "subtitle", widget: "text"}
+        - label: "Work List"
+          name: "workList"
+          widget: list
+          fields:
+            - { label: "Name", name: "name", widget: "string" }
+            - { label: "Description", name: "description", widget: "text" }
+    - label: "Contact"
+      name: "contact"
+      file: "content/contact.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Subtitle", name: "subtitle", widget: "text"}
