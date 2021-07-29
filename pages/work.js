@@ -1,8 +1,8 @@
 import Meta from '../components/Meta';
-import { attributes } from '../content/work.md';
+import { attributes } from '../content/work_posts.md';
 
 const work = () => {
-    let { title, subtitle, work_list } = attributes;
+    let { title, subtitle, work_posts } = attributes;
 
     return (
         <div>
@@ -10,7 +10,7 @@ const work = () => {
             <h1 className={'u-a2'}>{title}</h1>
             <p className="u-b0">{subtitle}</p>
             <ul>
-                {work_list.map((workItem, k) => (
+                {work_posts.map((workItem, k) => (
                     <li key={k}>
                         <h2>{workItem.name}</h2>
                         <p>{workItem.description}</p>

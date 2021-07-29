@@ -31,9 +31,9 @@ collections:
         - label: "Featured work"
           name: "featured_work"
           widget: "relation"
-          collection: "pages"
-          search_fields: [ "work.work_list.name" ]
-          value_field: "work.work_list.name"
+          collection: "work_posts"
+          search_fields: [ "title" ]
+          value_field: "title"
           multiple: true
           max: 2
     - label: "About"
@@ -48,15 +48,18 @@ collections:
       fields:
         - { label: "Title", name: "title", widget: "string"}
         - { label: "Subtitle", name: "subtitle", widget: "text"}
-        - label: "Work List"
-          name: "work_list"
-          widget: list
-          fields:
-            - { label: "Name", name: "name", widget: "string" }
-            - { label: "Description", name: "description", widget: "text" }
     - label: "Contact"
       name: "contact"
       file: "content/contact.md"
       fields:
         - { label: "Title", name: "title", widget: "string"}
         - { label: "Subtitle", name: "subtitle", widget: "text"}
+  - name: "work_posts"
+    label: "Work posts"
+    files:
+    - label: "Work post"
+      name: "work_post"
+      file: "content/work_posts.md"
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Subtitle", name: "subtitle", widget: "text" }
