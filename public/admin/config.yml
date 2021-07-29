@@ -32,8 +32,8 @@ collections:
           name: "featured_work"
           widget: "relation"
           collection: "pages"
-          search_fields: [ "work_list.name" ]
-          value_field: "work_list.name"
+          search_fields: [ "work.work_list.name" ]
+          value_field: "work.work_list.name"
           multiple: true
           max: 2
     - label: "About"
