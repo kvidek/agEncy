@@ -32,7 +32,7 @@ collections:
           name: "featured_work"
           widget: "relation"
           collection: "work_posts"
-          search_fields: [ "title" ]
+          search_fields: [ "work_posts.title" ]
           value_field: '{{slug}}'
           multiple: true
           max: 2
