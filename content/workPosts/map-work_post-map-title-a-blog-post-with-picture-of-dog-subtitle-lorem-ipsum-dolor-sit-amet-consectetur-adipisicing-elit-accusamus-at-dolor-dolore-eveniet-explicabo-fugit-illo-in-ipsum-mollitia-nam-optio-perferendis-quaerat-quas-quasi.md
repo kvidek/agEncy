@@ -1,4 +1,5 @@
 ---
+title: A blog post with picture of dog
 work_post:
   title: A blog post with picture of dog
   subtitle: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at
