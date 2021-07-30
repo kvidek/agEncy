@@ -59,9 +59,8 @@ collections:
     label: "Work posts"
     folder: 'content/workPosts'
     create: true
-    slug: '{{fields.slug}}'
+    slug: '{{slug}}'
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Subtitle", name: "subtitle", widget: "text" }
       - { label: 'Image', name: 'image', widget: 'image', required: true }
