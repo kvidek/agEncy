@@ -33,7 +33,7 @@ collections:
           widget: "relation"
           collection: "work_posts"
           search_fields: [ "title" ]
-          value_field: '{{title}} - {{subtitle}} - {{image}} - {{slug}}'
+          value_field: '{{slug}}'
           multiple: true
           max: 2
     - label: "About"
@@ -60,6 +60,12 @@ collections:
     create: true
     slug: '{{slug}}'
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Subtitle", name: "subtitle", widget: "text" }
-      - { label: 'Image', name: 'image', widget: 'image', required: true }
+      - label: "Work post"
+        name: "work_post"
+        widget: "object"
+        summary: '{{fields.title}}'
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Subtitle", name: "subtitle", widget: "text" }
+          - { label: 'Image', name: 'image', widget: 'image' }
+          - { label: 'Content', name: 'content', widget: 'markdown' }
