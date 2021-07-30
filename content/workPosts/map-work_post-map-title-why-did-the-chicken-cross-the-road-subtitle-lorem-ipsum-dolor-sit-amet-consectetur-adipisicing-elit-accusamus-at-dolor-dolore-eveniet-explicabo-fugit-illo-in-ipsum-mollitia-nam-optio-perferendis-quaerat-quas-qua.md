@@ -1,4 +1,5 @@
 ---
+title: Why did the chicken cross the road
 work_post:
   title: Why did the chicken cross the road
   subtitle: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at
