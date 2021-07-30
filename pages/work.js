@@ -22,6 +22,7 @@ const importWorkPosts = async () => {
 const work = ({ postList }) => {
     let { title, subtitle } = attributes;
 
+    console.log(typeof postList);
     console.log(postList);
 
     return (
