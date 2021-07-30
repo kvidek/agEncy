@@ -16,8 +16,8 @@ const Home = () => {
                     <ul>
                         {featured_work.map((workItem, k) => (
                             <li key={k}>
-                                <h2>{workItem.name}</h2>
-                                <p>{workItem.description}</p>
+                                <h2>{workItem}</h2>
+                                <p>{workItem}</p>
                             </li>
                         ))}
                     </ul>

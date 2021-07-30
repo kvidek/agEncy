@@ -33,7 +33,7 @@ collections:
           widget: "relation"
           collection: "work_posts"
           search_fields: [ "title" ]
-          value_field: "title"
+          value_field: {{fields.work_posts.title}} - {{fields.work_posts.subtitle}} - {{fields.work_posts.image}} - {{slug}}
           multiple: true
           max: 2
     - label: "About"
