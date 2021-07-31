@@ -5,19 +5,15 @@ import 'isomorphic-fetch';
 const workPost = ({ post }) => {
     console.log(post);
 
+    const { title, subtitle, image } = post.attributes;
+
     return (
         <div>
-            <Meta title={post.attributes.title} />
-            <h1 className={'u-a2'}>{post.attributes.title}</h1>
-            <p className="u-b0">{post.attributes.subtitle}</p>
+            <Meta title={title} />
+            <h1 className="u-a2">{title}</h1>
+            <p className="u-b0">{subtitle}</p>
 
-            <Image
-                alt={post.attributes.title}
-                src={`/${post.attributes.image}`}
-                layout="responsive"
-                width={640}
-                height={420}
-            />
+            <Image alt={title} src={`/${image}`} layout="responsive" width={640} height={420} />
         </div>
     );
 };
