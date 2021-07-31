@@ -1,6 +1,7 @@
 import Meta from '../components/Meta';
 import 'isomorphic-fetch';
 import Link from 'next/link';
+import Image from 'next/image';
 import { attributes } from '../content/work.md';
 
 const importWorkPosts = async () => {
@@ -39,10 +40,12 @@ const work = ({ postList }) => {
                                 <Link key={k} href={`work/${post.slug}`}>
                                     <a>
                                         <h3>{post.attributes.title}</h3>
-                                        <img
-                                            style={{ width: '320px' }}
-                                            src={post.attributes.image}
+                                        <Image
                                             alt={post.attributes.title}
+                                            src={`/${post.attributes.image}`}
+                                            layout="responsive"
+                                            width={320}
+                                            height={240}
                                         />
                                     </a>
                                 </Link>

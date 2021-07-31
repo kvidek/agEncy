@@ -3,6 +3,7 @@ import { attributes } from '../content/home.md';
 
 const Home = () => {
     let { title, subtitle, featured_work } = attributes;
+    console.log(featured_work);
 
     return (
         <>
@@ -16,8 +17,7 @@ const Home = () => {
                     <ul>
                         {featured_work.map((workItem, k) => (
                             <li key={k}>
-                                <h2>{workItem}</h2>
-                                <p>{workItem}</p>
+                                <h3>{workItem}</h3>
                             </li>
                         ))}
                     </ul>

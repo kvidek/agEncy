@@ -1,4 +1,5 @@
 import Meta from '../../components/Meta';
+import Image from 'next/image';
 import 'isomorphic-fetch';
 
 const workPost = ({ post }) => {
@@ -10,10 +11,13 @@ const workPost = ({ post }) => {
             <Meta title={post.attributes.title} />
             <h1 className={'u-a2'}>{post.attributes.title}</h1>
             <p className="u-b0">{post.attributes.subtitle}</p>
-            <img
-                style={{ width: '640px' }}
-                src={post.attributes.image}
+
+            <Image
                 alt={post.attributes.title}
+                src={`/${post.attributes.image}`}
+                layout="responsive"
+                width={640}
+                height={420}
             />
         </div>
     );
