@@ -38,16 +38,18 @@ const work = ({ postList }) => {
                         {postList.map((post, k) => {
                             return (
                                 <Link key={k} href={`work/${post.slug}`}>
-                                    <a>
-                                        <h3>{post.attributes.title}</h3>
-                                        <Image
-                                            alt={post.attributes.title}
-                                            src={`/${post.attributes.image}`}
-                                            layout="responsive"
-                                            width={320}
-                                            height={240}
-                                        />
-                                    </a>
+                                    <li>
+                                        <a>
+                                            <h3>{post.attributes.title}</h3>
+                                            <Image
+                                                alt={post.attributes.title}
+                                                src={`/${post.attributes.image}`}
+                                                layout="responsive"
+                                                width={320}
+                                                height={240}
+                                            />
+                                        </a>
+                                    </li>
                                 </Link>
                             );
                         })}

@@ -23,9 +23,9 @@ const importWorkPosts = async () => {
 const Home = ({ postList }) => {
     let { title, subtitle, featured_work } = attributes;
 
-    console.log(featured_work);
+    const featuredPosts = postList.filter(post => featured_work.includes(post.attributes.slug));
 
-    const filteredPostList = [];
+    console.log(featuredPosts);
 
     return (
         <>
@@ -35,12 +35,24 @@ const Home = ({ postList }) => {
             <div>
                 <h1 className={'u-a2'}>{title}</h1>
                 <p className="u-b0">{subtitle}</p>
-                {featured_work && (
+                {featuredPosts && (
                     <ul>
-                        {featured_work.map((workItem, k) => (
-                            <li key={k}>
-                                <h3>{workItem}</h3>
-                            </li>
+                        {featuredPosts.map((workItem, k) => (
+                            <Link key={k} href={`work/${workItem.slug}`}>
+                                <li key={k}>
+                                    <a>
+                                        <h3>{workItem.attributes.title}</h3>
+                                        <p>{workItem.attributes.subtitle}</p>
+                                        <Image
+                                            alt={workItem.attributes.title}
+                                            src={`/${workItem.attributes.image}`}
+                                            layout="responsive"
+                                            width={320}
+                                            height={240}
+                                        />
+                                    </a>
+                                </li>
+                            </Link>
                         ))}
                     </ul>
                 )}
@@ -48,8 +60,7 @@ const Home = ({ postList }) => {
         </>
     );
 };
-
-home.getInitialProps = async () => {
+Home.getInitialProps = async () => {
     console.log('getInitialProps');
 
     const postList = await importWorkPosts();
