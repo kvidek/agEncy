@@ -3,6 +3,8 @@ import Image from 'next/image';
 import 'isomorphic-fetch';
 
 const workPost = ({ post }) => {
+    console.log(post);
+
     return (
         <div>
             <Meta title={post.attributes.title} />

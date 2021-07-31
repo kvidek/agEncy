@@ -3,25 +3,10 @@ import 'isomorphic-fetch';
 import Link from 'next/link';
 import Image from 'next/image';
 import { attributes } from '../content/work.md';
-
-const importWorkPosts = async () => {
-    // https://medium.com/@shawnstern/importing-multiple-markdown-files-into-a-react-component-with-webpack-7548559fce6f
-    // second flag in require.context function is if subdirectories should be searched
-    const markdownFiles = require
-        .context('../content/workPosts', false, /\.md$/)
-        .keys()
-        .map(relativePath => relativePath.substring(2));
-
-    return Promise.all(
-        markdownFiles.map(async path => {
-            const markdown = await import(`../content/workPosts/${path}`);
-            return { ...markdown, slug: path.substring(0, path.length - 3) };
-        })
-    );
-};
+import importWorkPosts from '../lib/importWorkPosts';
 
 const work = ({ postList }) => {
-    let { title, subtitle } = attributes;
+    const { title, subtitle } = attributes;
 
     console.log(typeof postList);
     console.log(postList);
