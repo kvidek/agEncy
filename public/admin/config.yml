@@ -26,14 +26,14 @@ collections:
       name: "home"
       file: "content/home.md"
       fields:
-        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Title", name: "title", widget: "string", required: true}
         - { label: "Subtitle", name: "subtitle", widget: "text"}
         - label: "Featured work"
           name: "featured_work"
           widget: "relation"
           collection: "work_posts"
           search_fields: [ "title" ]
-          value_field: '{{slug}}'
+          value_field: "slug"
           display_fields: [ "title" ]
           multiple: true
           max: 2
@@ -41,19 +41,19 @@ collections:
       name: "about"
       file: "content/about.md"
       fields:
-        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Title", name: "title", widget: "string", required: true}
         - { label: "Subtitle", name: "subtitle", widget: "text"}
     - label: "Work"
       name: "work"
       file: "content/work.md"
       fields:
-        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Title", name: "title", widget: "string", required: true}
         - { label: "Subtitle", name: "subtitle", widget: "text"}
     - label: "Contact"
       name: "contact"
       file: "content/contact.md"
       fields:
-        - { label: "Title", name: "title", widget: "string"}
+        - { label: "Title", name: "title", widget: "string", required: true}
         - { label: "Subtitle", name: "subtitle", widget: "text"}
   - name: "work_posts"
     label: "Work posts"
@@ -61,6 +61,7 @@ collections:
     create: true
     slug: '{{slug}}'
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Slug", name: "slug", widget: "string", required: true }
       - { label: "Subtitle", name: "subtitle", widget: "text" }
-      - { label: 'Image', name: 'image', widget: 'image', required: true }
+      - { label: 'Image', name: 'image', widget: 'image' }
