@@ -1,11 +1,11 @@
 const fs = require('fs');
-const blogPostsFolder = './content/workPosts';
+const workPostsFolder = './content/workPosts';
 
 const getPathsForPosts = () => {
     return fs
-        .readdirSync(blogPostsFolder)
-        .map(blogName => {
-            const trimmedName = blogName.substring(0, blogName.length - 3);
+        .readdirSync(workPostsFolder)
+        .map(workName => {
+            const trimmedName = workName.substring(0, workName.length - 3);
             return {
                 [`/work/${trimmedName}`]: {
                     page: '/work/[slug]',
@@ -25,7 +25,6 @@ module.exports = {
         configuration.module.rules.push({
             test: /\.md$/,
             loader: 'frontmatter-markdown-loader',
-            options: { mode: ['react-component'] },
         });
         return configuration;
     },

@@ -6,6 +6,9 @@ import { attributes } from '../content/home.md';
 import importWorkPosts from '../lib/importWorkPosts';
 
 const Home = ({ postList }) => {
+    console.log(attributes);
+    console.log(postList);
+
     const { title, subtitle, featured_work } = attributes;
 
     const featuredPosts = postList.filter(post => featured_work.includes(post.attributes.slug));
