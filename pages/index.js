@@ -6,8 +6,8 @@ import { attributes } from '../content/home.md';
 import importWorkPosts from '../lib/importWorkPosts';
 
 const Home = ({ postList }) => {
-    console.log(attributes);
-    console.log(postList);
+    // console.log(attributes);
+    // console.log(postList);
 
     const { title, subtitle, featured_work } = attributes;
 
@@ -51,9 +51,18 @@ const Home = ({ postList }) => {
     );
 };
 
-Home.getInitialProps = async () => {
-    const postList = await importWorkPosts();
-    return { postList };
-};
-
 export default Home;
+
+export const getStaticProps = async () => {
+    const postList = await importWorkPosts();
+
+    if (!postList) {
+        return {
+            notFound: true,
+        };
+    }
+
+    return {
+        props: { postList },
+    };
+};

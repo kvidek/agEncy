@@ -45,11 +45,18 @@ const work = ({ postList }) => {
     );
 };
 
-work.getInitialProps = async () => {
-    console.log('getInitialProps');
-
-    const postList = await importWorkPosts();
-    return { postList };
-};
-
 export default work;
+
+export const getStaticProps = async () => {
+    const postList = await importWorkPosts();
+
+    if (!postList) {
+        return {
+            notFound: true,
+        };
+    }
+
+    return {
+        props: { postList },
+    };
+};
