@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from '../styles/components/Navigation.module.scss';
+import Menu from './Menu';
 
 const Navigation = () => {
     return (
@@ -11,17 +12,7 @@ const Navigation = () => {
                     </div>
                 </div>
                 <div className="c-navigation__right">
-                    <ul className={styles['c-menu']}>
-                        <li className={styles['c-menu__item']}>
-                            <Link href="/about">About</Link>
-                        </li>
-                        <li className={styles['c-menu__item']}>
-                            <Link href="/work">Work</Link>
-                        </li>
-                        <li className={styles['c-menu__item']}>
-                            <Link href="/contact">Contact</Link>
-                        </li>
-                    </ul>
+                    <Menu />
                 </div>
             </div>
         </nav>

@@ -1,0 +1,61 @@
+@import '../tools/tools.index';
+@import '../settings/settings.index';
+
+//block
+.c-button {
+    -webkit-appearance: none;
+    display: inline-block;
+    border: 1px solid $primary-color;
+    outline: none;
+    margin-right: 10px;
+    background-color: $white;
+    color: $button-color;
+    @include fluidValue('padding', 's-20');
+    cursor: pointer;
+    transition: $t-default;
+    text-align: center;
+    letter-spacing: 0.18em;
+    @include fontSize('a1');
+    font-family: $font-primary--bold;
+    text-transform: uppercase;
+    width: 100%;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include mq(sm) {
+        @include fontSize('b0');
+    }
+
+    //elements
+    &__label {
+    }
+
+    //modifiers
+    &--primary {
+        background-color: $primary-color;
+        color: $white;
+
+        //state
+        &:hover {
+            background-color: lighten($primary-color, 15%);
+        }
+    }
+
+    &--secondary {
+        color: $primary-color;
+
+        //state
+        &:hover {
+            background-color: darken($white, 5%);
+        }
+    }
+
+    //state
+    &:disabled {
+        border-color: $disabled-color;
+        color: $disabled-color;
+        cursor: not-allowed;
+    }
+}
