@@ -2,7 +2,7 @@ import styles from '../styles/components/Menu.module.scss';
 import Link from 'next/link';
 import Button from './Button';
 
-const Menu = () => {
+const Menu = ({ variant }) => {
     return (
         <ul className={styles['c-menu']}>
             <li className={styles['c-menu__item']}>
@@ -13,7 +13,10 @@ const Menu = () => {
             </li>
             <li className={styles['c-menu__item']}>
                 <Link href="/contact">
-                    <Button variant={'primary'} label={"Let's get started"} />
+                    <Button
+                        variant={variant === 'light' ? 'secondary' : 'primary'}
+                        label={"Let's get started"}
+                    />
                 </Link>
             </li>
         </ul>
