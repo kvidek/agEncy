@@ -8,7 +8,7 @@ const SocialNetworks = ({ networks }) => {
             {networks && (
                 <ul className={styles['c-social-networks']}>
                     {networks.map((network, n) => {
-                        const { name, link } = network.attributes;
+                        const { name, link } = network;
 
                         return (
                             <li key={n} className={styles['c-social-networks__item']}>
