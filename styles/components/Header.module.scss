@@ -1,8 +1,25 @@
+@import '../tools/tools.index';
+@import '../settings/settings.index';
+
 .o-header {
-    &--dark {
+
+}
+
+.c-header {
+    background-color: $primary-color;
+    color: $white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &--light {
+
     }
 
     &--light {
+        background-color: $light-grey;
+        color: $primary-color;
     }
 
     &--accent {

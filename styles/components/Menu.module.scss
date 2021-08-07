@@ -1,4 +1,15 @@
+@import '../tools/tools.index';
+@import '../settings/settings.index';
+
 .c-menu {
     display: flex;
     align-items: center;
+
+    &--dark {
+        color: $primary-color;
+    }
+
+    &--light {
+        color: $white;
+    }
 }

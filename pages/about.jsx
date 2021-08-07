@@ -1,6 +1,7 @@
 import Meta from '../components/Meta';
 import { attributes } from '../content/about.md';
 import Navigation from '../components/Navigation';
+import Header from '../components/Header';
 
 const about = () => {
     let { title, subtitle } = attributes;
@@ -9,10 +10,9 @@ const about = () => {
         <div>
             <Meta title="About" />
 
-            <Navigation />
+            <Navigation variant={'dark'} />
 
-            <h1 className="u-a2">{title}</h1>
-            <p className="u-b0">{subtitle}</p>
+            <Header variant={'light'} title={title} subtitle={subtitle} />
         </div>
     );
 };

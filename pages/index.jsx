@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { attributes } from '../content/home.md';
 import importWorkPosts from '../lib/importWorkPosts';
 import Navigation from '../components/Navigation';
+import Header from '../components/Header';
 
 const Home = ({ postList }) => {
     // console.log(attributes);
@@ -22,9 +23,9 @@ const Home = ({ postList }) => {
 
             <Navigation />
 
+            <Header variant={'dark'} title={title} subtitle={subtitle} />
+
             <div>
-                <h1 className="u-a2">{title}</h1>
-                <p className="u-b0">{subtitle}</p>
                 {featuredPosts && (
                     <ul>
                         {featuredPosts.map((post, k) => {

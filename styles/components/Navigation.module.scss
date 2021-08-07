@@ -1,5 +1,13 @@
+@import '../tools/tools.index';
+@import '../settings/settings.index';
+
 .o-navigation {
     border: 1px solid cyan;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: getZindex("navigation");
 }
 
 .c-navigation {
