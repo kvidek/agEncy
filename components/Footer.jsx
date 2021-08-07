@@ -1,10 +1,13 @@
-import styles from '../styles/components/Footer.module.scss';
 import Link from 'next/link';
 import FooterMenu from './FooterMenu';
 import SocialNetworks from './SocialNetworks';
 import LinkButton from './LinkButton';
+import { attributes } from '../settings/settings.md';
+import styles from '../styles/components/Footer.module.scss';
 
 const Footer = () => {
+    const { site_credits, social_networks } = attributes;
+
     return (
         <footer className={styles['o-footer']}>
             <div className={styles['c-footer']}>
@@ -17,10 +20,10 @@ const Footer = () => {
                 <div className={styles['c-footer__bottom']}>
                     <div className={styles['c-footer__bottom-left']}>
                         <FooterMenu />
-                        <SocialNetworks />
+                        <SocialNetworks networks={social_networks} />
 
                         <div className={`${styles['c-footer__credits']} u-b1`}>
-                            <p>© inSuper. All rights reserved 2020</p>
+                            <p>{site_credits}</p>
                             <Link href="/privacy-policy">
                                 <a>
                                     <span>Privacy policy</span>

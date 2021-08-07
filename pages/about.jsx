@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const about = () => {
-    let { title, subtitle } = attributes;
+    const { title, subtitle } = attributes;
 
     return (
         <>
