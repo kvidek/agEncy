@@ -1,7 +1,7 @@
 @import '../tools/tools.index';
 @import '../settings/settings.index';
 
-.c-footer-menu {
+.c-social-networks {
     display: flex;
     flex-direction: column;
     @include fontSize('b1');

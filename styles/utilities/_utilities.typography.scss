@@ -1,5 +1,5 @@
-.u-a2 {
-    @include fontSize('a2');
+.u-a3 {
+    @include fontSize('a3');
 
     font-family: $font-secondary;
     line-height: 100%;
@@ -9,6 +9,14 @@
     &.u-fw-400 {
         font-family: $font-primary;
     }
+}
+
+.u-a2 {
+    @include fontSize('a2');
+
+    font-family: $font-primary;
+    line-height: 110%;
+    font-weight: normal;
 }
 
 .u-a1 {

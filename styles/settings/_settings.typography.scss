@@ -16,9 +16,13 @@ $font-secondary: $calibre-bold;
  * Font size map
  */
 $settings-typography: (
-    'a2': (
+    'a3': (
         $breakpoint-sm: 90px,
         $breakpoint-xl: 90px,
+    ),
+    'a2': (
+        $breakpoint-sm: 27px,
+        $breakpoint-xl: 27px,
     ),
     'a1': (
         $breakpoint-sm: 35px,

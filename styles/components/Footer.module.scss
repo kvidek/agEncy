@@ -14,6 +14,7 @@
 
         h4 {
             max-width: 780px;
+            @include fluidValue('padding-bottom', 's-20');
         }
     }
 
@@ -28,10 +29,13 @@
         color: $white;
         padding-left: percentage(3/24);
         padding-right: percentage(1/24);
+        display: flex;
+        flex-wrap: wrap;
     }
 
     &__credits {
         display: flex;
+        width: 100%;
         align-items: center;
         justify-content: space-between;
         @include fluidValue("padding-top", "s-200");

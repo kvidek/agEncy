@@ -9,7 +9,7 @@ const Header = ({ variant, title, subtitle }) => {
             }`}
         >
             <div className={styles['c-header__heading']}>
-                <h1 className="u-a2">{title}</h1>
+                <h1 className="u-a3">{title}</h1>
                 <p className="u-b0">{subtitle}</p>
             </div>
         </header>

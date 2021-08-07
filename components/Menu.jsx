@@ -3,9 +3,9 @@ import Button from './Button';
 import PropTypes from 'prop-types';
 import styles from '../styles/components/Menu.module.scss';
 
-const Menu = ({ variant }) => {
+const Menu = () => {
     return (
-        <ul className={`${styles['c-menu']} ${styles['c-menu--' + variant]}`}>
+        <ul className={styles['c-menu']}>
             <li className={styles['c-menu__item']}>
                 <Link href="/about">
                     <a>
@@ -23,10 +23,7 @@ const Menu = ({ variant }) => {
             <li className={styles['c-menu__item']}>
                 <Link href="/contact">
                     <a>
-                        <Button
-                            variant={variant === 'dark' ? 'primary' : 'secondary'}
-                            label={"Let's get started"}
-                        />
+                        <Button variant={'secondary'} label={"Let's get started"} />
                     </a>
                 </Link>
             </li>
