@@ -19,8 +19,8 @@ const Footer = () => {
                         <FooterMenu />
                         <SocialNetworks />
 
-                        <div className={styles['c-footer__credits']}>
-                            <p className="u-b0">© inSuper. All rights reserved 2020</p>
+                        <div className={`${styles['c-footer__credits']} u-b1`}>
+                            <p>© inSuper. All rights reserved 2020</p>
                             <Link href="/privacy-policy">
                                 <a>
                                     <span>Privacy policy</span>
