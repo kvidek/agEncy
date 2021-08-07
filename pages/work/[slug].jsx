@@ -4,13 +4,14 @@ import 'isomorphic-fetch';
 import importWorkPosts from '../../lib/importWorkPosts';
 import Navigation from '../../components/Navigation';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 const workPost = post => {
     console.log('post: ', post);
     const { title, subtitle, image } = post.attributes;
 
     return (
-        <div>
+        <>
             <Meta title={title} />
 
             <Navigation variant={'dark'} />
@@ -18,7 +19,9 @@ const workPost = post => {
             <Header variant={'light'} title={title} subtitle={subtitle} />
 
             <Image alt={title} src={`/${image}`} layout="responsive" width={640} height={420} />
-        </div>
+
+            <Footer />
+        </>
     );
 };
 

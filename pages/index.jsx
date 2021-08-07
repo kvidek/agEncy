@@ -6,6 +6,7 @@ import { attributes } from '../content/home.md';
 import importWorkPosts from '../lib/importWorkPosts';
 import Navigation from '../components/Navigation';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Home = ({ postList }) => {
     // console.log(attributes);
@@ -52,6 +53,8 @@ const Home = ({ postList }) => {
                     </ul>
                 )}
             </div>
+
+            <Footer />
         </>
     );
 };

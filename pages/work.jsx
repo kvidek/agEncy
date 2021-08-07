@@ -6,12 +6,13 @@ import { attributes } from '../content/work.md';
 import importWorkPosts from '../lib/importWorkPosts';
 import Navigation from '../components/Navigation';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const work = ({ postList }) => {
     const { title, subtitle } = attributes;
 
     return (
-        <div>
+        <>
             <Meta title="Work" />
 
             <Navigation />
@@ -45,7 +46,9 @@ const work = ({ postList }) => {
                     </ul>
                 )}
             </div>
-        </div>
+
+            <Footer />
+        </>
     );
 };
 

@@ -8,10 +8,26 @@
 .c-header {
     background-color: $primary-color;
     color: $white;
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    &__heading {
+        @include fluidValue('padding-top', 's-96');
+        @include fluidValue('padding-bottom', 's-96');
+        padding-left: percentage(3/24);
+        padding-right: percentage(3/24);
+
+        h1 {
+            max-width: 780px;
+            @include fluidValue('padding-bottom', 's-20');
+        }
+
+        p {
+            max-width: 420px;
+        }
+    }
 
     &--light {
 

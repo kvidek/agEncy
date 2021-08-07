@@ -7,17 +7,17 @@
     display: inline-block;
     border: none;
     outline: none;
-    margin-right: 10px;
     background-color: $white;
     color: $button-color;
-    @include fluidValue('padding', 's-20');
+    @include fluidValue('padding-left', 's-16');
+    @include fluidValue('padding-right', 's-16');
+    @include fluidValue('padding-top', 's-8');
+    @include fluidValue('padding-bottom', 's-5');
     cursor: pointer;
     transition: $t-default;
     text-align: center;
-    letter-spacing: 0.18em;
-    @include fontSize('a1');
+    @include fontSize('b1');
     font-family: $font-primary;
-    text-transform: uppercase;
     width: 100%;
 
     &:last-child {

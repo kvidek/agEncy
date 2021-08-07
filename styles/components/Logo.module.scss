@@ -1,5 +1,12 @@
+@import '../tools/tools.index';
+@import '../settings/settings.index';
+
 .c-logo {
     &__logo {
+        transition: $t-default;
 
+        &:hover {
+            opacity: 0.8;
+        }
     }
 }

@@ -7,17 +7,27 @@ const Menu = ({ variant }) => {
     return (
         <ul className={`${styles['c-menu']} ${styles['c-menu--' + variant]}`}>
             <li className={styles['c-menu__item']}>
-                <Link href="/about">About</Link>
+                <Link href="/about">
+                    <a>
+                        <span>About</span>
+                    </a>
+                </Link>
             </li>
             <li className={styles['c-menu__item']}>
-                <Link href="/work">Work</Link>
+                <Link href="/work">
+                    <a>
+                        <span>Work</span>
+                    </a>
+                </Link>
             </li>
             <li className={styles['c-menu__item']}>
                 <Link href="/contact">
-                    <Button
-                        variant={variant === 'dark' ? 'primary' : 'secondary'}
-                        label={"Let's get started"}
-                    />
+                    <a>
+                        <Button
+                            variant={variant === 'dark' ? 'primary' : 'secondary'}
+                            label={"Let's get started"}
+                        />
+                    </a>
                 </Link>
             </li>
         </ul>

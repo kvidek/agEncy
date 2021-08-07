@@ -5,7 +5,7 @@ const Logo = ({ variant }) => {
     return (
         <div className={styles['c-logo']}>
             <Link href="/">
-                <div className={styles['c-logo__logo']}>
+                <a className={styles['c-logo__logo']}>
                     <svg
                         width="79"
                         height="21"
@@ -18,7 +18,7 @@ const Logo = ({ variant }) => {
                             fill={variant === 'dark' ? '#161617' : '#ffffff'}
                         />
                     </svg>
-                </div>
+                </a>
             </Link>
         </div>
     );

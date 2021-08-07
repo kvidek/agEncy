@@ -2,7 +2,6 @@
 @import '../settings/settings.index';
 
 .o-navigation {
-    border: 1px solid cyan;
     position: fixed;
     top: 0;
     left: 0;
@@ -14,4 +13,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include fluidValue("padding-top", "s-30");
+    @include fluidValue("padding-bottom", "s-30");
+    padding-left: percentage(1/24);
+    padding-right: percentage(1/24);
 }

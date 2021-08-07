@@ -1,2 +1,55 @@
+@import '../tools/tools.index';
+@import '../settings/settings.index';
+
 .o-footer {
+    background-color: $light-grey;
+}
+
+.c-footer {
+    &__top {
+        @include fluidValue("padding-top", "s-96");
+        @include fluidValue("padding-bottom", "s-96");
+        padding-left: percentage(3/24);
+        padding-right: percentage(3/24);
+
+        h4 {
+            max-width: 780px;
+        }
+    }
+
+    &__bottom {
+    }
+
+    &__bottom-left {
+        @include fluidValue("padding-top", "s-96");
+        @include fluidValue("padding-bottom", "s-48");
+        width: percentage(12/24);
+        background-color: $primary-color;
+        color: $white;
+        padding-left: percentage(3/24);
+        padding-right: percentage(1/24);
+    }
+
+    &__credits {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include fluidValue("padding-top", "s-200");
+
+        p {
+            padding-right: 10px;
+        }
+
+        a {
+            padding-left: 10px;
+            display: inline-block;
+            @include fluidValue("padding-top", "s-5");
+            @include fluidValue("padding-bottom", "s-5");
+            transition: $t-default;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
 }
