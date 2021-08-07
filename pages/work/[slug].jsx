@@ -3,6 +3,7 @@ import Image from 'next/image';
 import 'isomorphic-fetch';
 import importWorkPosts from '../../lib/importWorkPosts';
 import Navigation from '../../components/Navigation';
+import Header from '../../components/Header';
 
 const workPost = post => {
     console.log('post: ', post);
@@ -12,11 +13,10 @@ const workPost = post => {
         <div>
             <Meta title={title} />
 
-            <Navigation />
+            <Navigation variant={'dark'} />
 
-            <h1 className="u-a2">{title}</h1>
-            <p className="u-b0">{subtitle}</p>
-            {/**/}
+            <Header variant={'light'} title={title} subtitle={subtitle} />
+
             <Image alt={title} src={`/${image}`} layout="responsive" width={640} height={420} />
         </div>
     );
