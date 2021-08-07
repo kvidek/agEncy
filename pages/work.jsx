@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { attributes } from '../content/work.md';
 import importWorkPosts from '../lib/importWorkPosts';
+import Navigation from '../components/Navigation';
 
 const work = ({ postList }) => {
     const { title, subtitle } = attributes;
@@ -11,6 +12,9 @@ const work = ({ postList }) => {
     return (
         <div>
             <Meta title="Work" />
+
+            <Navigation />
+
             <h1 className="u-a2">{title}</h1>
             <p className="u-b0">{subtitle}</p>
 

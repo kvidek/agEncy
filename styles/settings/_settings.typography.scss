@@ -1,19 +1,16 @@
 /**
- * Roboto
+ * Calibre
  */
-@include font-face('InterRegular', 'Inter-Regular');
-@include font-face('InterBold', 'Inter-Bold');
-@include font-face('DomineRegular', 'Domine-Regular');
+@include font-face('CalibreBold', 'Calibre-Bold');
+@include font-face('CalibreRegular', 'Calibre-Regular');
 
 /**
  * Font variables
  */
-$inter-regular: 'InterRegular', sans-serif;
-$inter-bold: 'InterBold', sans-serif;
-$domine: 'DomineRegular', serif;
-$font-primary: $inter-regular;
-$font-primary--bold: $inter-bold;
-$font-secondary: $domine;
+$calibre-regular: 'CalibreRegular', sans-serif;
+$calibre-bold: 'CalibreBold', sans-serif;
+$font-primary: $calibre-regular;
+$font-secondary: $calibre-bold;
 
 /**
  * Font size map

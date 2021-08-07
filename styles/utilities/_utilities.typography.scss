@@ -10,7 +10,7 @@
 .u-a1 {
     @include fontSize('a1');
 
-    font-family: $font-primary--bold;
+    font-family: $font-primary;
     line-height: 110%;
     font-weight: normal;
 }
@@ -24,7 +24,7 @@
     font-weight: normal;
 
     &.u-fw-700 {
-        font-family: $font-primary--bold;
+        font-family: $font-primary;
     }
 }
 
