@@ -4,19 +4,25 @@ import SocialNetworks from './SocialNetworks';
 import LinkButton from './LinkButton';
 import { attributes } from '../settings/settings.md';
 import styles from '../styles/components/Footer.module.scss';
+import PropTypes from 'prop-types';
 
-const Footer = () => {
+const Footer = ({ showCta }) => {
     const { site_credits, social_networks } = attributes;
 
     return (
         <footer className={styles['o-footer']}>
             <div className={styles['c-footer']}>
-                <div className={styles['c-footer__top']}>
-                    <h4 className="u-a3 u-fw-400">Interested in partnering with us?</h4>
-                    <Link href="/about">
-                        <LinkButton label={'Reach out to us'} />
-                    </Link>
-                </div>
+                {showCta && (
+                    <div className={styles['c-footer__top']}>
+                        <h4 className="u-a3 u-fw-400">Interested in partnering with us?</h4>
+                        <Link href="/contact">
+                            <a>
+                                <LinkButton label={'Reach out to us'} />
+                            </a>
+                        </Link>
+                    </div>
+                )}
+
                 <div className={styles['c-footer__bottom']}>
                     <div className={styles['c-footer__bottom-left']}>
                         <FooterMenu />
@@ -35,6 +41,14 @@ const Footer = () => {
             </div>
         </footer>
     );
+};
+
+Footer.defaultProps = {
+    showCta: true,
+};
+
+Footer.propTypes = {
+    showCta: PropTypes.bool,
 };
 
 export default Footer;

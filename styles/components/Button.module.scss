@@ -9,10 +9,10 @@
     outline: none;
     background-color: $white;
     color: $button-color;
-    @include fluidValue('padding-left', 's-16');
-    @include fluidValue('padding-right', 's-16');
-    @include fluidValue('padding-top', 's-8');
-    @include fluidValue('padding-bottom', 's-5');
+    @include fluidValue('padding-left', 's-20');
+    @include fluidValue('padding-right', 's-20');
+    @include fluidValue('padding-top', 's-10');
+    @include fluidValue('padding-bottom', 's-8');
     cursor: pointer;
     transition: $t-default;
     text-align: center;

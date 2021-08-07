@@ -15,7 +15,7 @@ const contact = () => {
 
             <Header variant={'dark'} title={title} subtitle={subtitle} />
 
-            <Footer />
+            <Footer showCta={false} />
         </>
     );
 };
