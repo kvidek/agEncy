@@ -7,6 +7,7 @@ import importWorkPosts from '../lib/importWorkPosts';
 import Navigation from '../components/Navigation';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Container from '../components/Container';
 
 const Home = ({ postList }) => {
     // console.log(attributes);
@@ -26,7 +27,7 @@ const Home = ({ postList }) => {
 
             <Header variant={'dark'} title={title} subtitle={subtitle} />
 
-            <div>
+            <Container>
                 {featuredPosts && (
                     <ul>
                         {featuredPosts.map((post, k) => {
@@ -52,7 +53,7 @@ const Home = ({ postList }) => {
                         })}
                     </ul>
                 )}
-            </div>
+            </Container>
 
             <Footer />
         </>

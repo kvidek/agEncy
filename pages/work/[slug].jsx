@@ -6,6 +6,7 @@ import Navigation from '../../components/Navigation';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
+import Container from '../../components/Container';
 
 const workPost = post => {
     // console.log('post: ', post);
@@ -27,7 +28,10 @@ const workPost = post => {
 
             <Image alt={title} src={image} layout="responsive" width={640} height={420} />
 
-            <div className="u-rt-editor" dangerouslySetInnerHTML={{ __html: post.html }} />
+            <Container>
+                <div className="u-rt-editor" dangerouslySetInnerHTML={{ __html: post.html }} />
+            </Container>
+
             {nextPost && (
                 <div>
                     {nextPost.map((post, k) => {
