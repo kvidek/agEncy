@@ -20,6 +20,8 @@ const workPost = post => {
 
             <Image alt={title} src={`/${image}`} layout="responsive" width={640} height={420} />
 
+            <div className="u-rt-editor" dangerouslySetInnerHTML={{ __html: post.html }} />
+
             <Footer />
         </>
     );
