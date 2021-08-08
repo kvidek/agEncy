@@ -40,7 +40,7 @@ const Home = ({ postList }) => {
                                             <p className={'u-b0'}>{subtitle}</p>
                                             <Image
                                                 alt={title}
-                                                src={`/${image}`}
+                                                src={image}
                                                 layout="responsive"
                                                 width={320}
                                                 height={240}

@@ -18,7 +18,7 @@ const workPost = post => {
 
             <Header variant={'light'} title={title} subtitle={subtitle} />
 
-            <Image alt={title} src={`/${image}`} layout="responsive" width={640} height={420} />
+            <Image alt={title} src={image} layout="responsive" width={640} height={420} />
 
             <div className="u-rt-editor" dangerouslySetInnerHTML={{ __html: post.html }} />
 

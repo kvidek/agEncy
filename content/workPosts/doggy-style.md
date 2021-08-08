@@ -5,5 +5,5 @@ subtitle: Lorem ipsum amet, consectetur adipisicing elit.  Accusamus at dolor
   dolore eveniet explicabo fugit, illo in ipsum mollitia nam optio perferendis
   quaerat quas quasi reiciendis sequi totam vel velit. Two dogs doing what dogs
   do.
-image: img/puppy-and-adult-dog.jpeg
+image: /img/puppy-and-adult-dog.jpeg
 ---
