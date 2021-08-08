@@ -6,4 +6,5 @@ subtitle: Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Accusamus
   perferendis quaerat quas quasi reiciendis sequi totam vel velit. To get to the
   other side, no?
 image: /img/1200px-whio_blue_duck_at_staglands_akatarawa_new_zealand.jpeg
+next_work: 
 ---

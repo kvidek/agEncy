@@ -1,7 +1,7 @@
 import styles from '../styles/components/SocialNetworks.module.scss';
 
 const SocialNetworks = ({ networks }) => {
-    console.log(networks);
+    // console.log(networks);
 
     return (
         <>

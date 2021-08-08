@@ -6,4 +6,5 @@ subtitle: Nunc a risus congue, ultricies diam ut, pharetra nisl. Proin at mattis
   amet. Morbi iaculis tellus semper est venenatis hendrerit. Class aptent taciti
   sociosqu ad litora.
 image: /img/yamaha-xsr-700.jpeg
+next_work: 
 ---

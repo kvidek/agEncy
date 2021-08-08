@@ -29,8 +29,8 @@ const work = ({ postList }) => {
                                 <Link key={k} href={`work/${post.slug}`}>
                                     <li>
                                         <a>
-                                            <h3 className={'u-a2'}>{title}</h3>
-                                            <p className={'u-b0'}>{subtitle}</p>
+                                            <h3 className="u-a2">{title}</h3>
+                                            <p className="u-b0">{subtitle}</p>
                                             <Image
                                                 alt={title}
                                                 src={image}
