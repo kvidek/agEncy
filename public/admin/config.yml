@@ -67,10 +67,10 @@ collections:
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'Post content', name: 'body', widget: 'markdown' }
       - label: "Next work"
-          name: "next_work"
-          widget: "relation"
-          collection: "work_posts"
-          search_fields: [ "title" ]
-          value_field: "slug"
-          display_fields: [ "title" ]
-          multiple: false
+        name: "next_work"
+        widget: "relation"
+        collection: "work_posts"
+        search_fields: [ "title" ]
+        value_field: "slug"
+        display_fields: [ "title" ]
+        multiple: false
