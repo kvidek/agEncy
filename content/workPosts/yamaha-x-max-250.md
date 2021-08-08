@@ -4,14 +4,14 @@ slug: yamaha-x-max-250
 subtitle: The X-Max 250 is simplicity itself to jump on and ride. It's comfy,
   easy to get on and off and handles the twist and turns of the urban sprawl
   with ease. It's practical and capable, but uninspiring.
-image: img/x-max-250.jpeg
+image: /img/x-max-250.jpeg
 next_work: yamaha-xsr-700
 ---
 ### Custom-made & app-exclusive merch
 
 Amet massa vitae tortor condimentum. Accumsan tortor posuere ac ut consequat semper viverra nam. In iaculis nunc sed augue lacus viverra vitae congue. Mattis rhoncus urna neque viverra justo. 
 
-![X-Max 250](img/x-max-250-a.jpeg "X-Max 250")
+![X-Max 250](/img/x-max-250-a.jpeg "X-Max 250")
 
 ### New tech… new experiences…
 
