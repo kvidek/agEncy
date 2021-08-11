@@ -1,0 +1,27 @@
+@import '../tools/tools.index';
+@import '../settings/settings.index';
+
+.c-next-work {
+    padding-left: percentage(3/24);
+    padding-right: percentage(1/24);
+    display: flex;
+    align-items: center;
+    background-color: $primary-color;
+    color: $white;
+    @include fluidValue("padding-top", "s-64");
+    @include fluidValue("padding-bottom", "s-64");
+
+    &__content {
+        width: percentage(12/20);
+        padding-right: percentage(1/20);
+
+        p {
+            max-width: 420px;
+        }
+    }
+
+    &__image {
+        width: percentage(9/20);
+        padding-left: percentage(1/20);
+    }
+}

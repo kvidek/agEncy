@@ -3,8 +3,6 @@ import Image from 'next/image';
 import LinkButton from './LinkButton';
 
 const WorkItem = ({ eyebrow, title, subtitle, image, orientation }) => {
-    console.log(orientation);
-
     return (
         <div className={`${styles['c-work-item']} ${styles['c-work-item--' + orientation]}`}>
             <div className={styles['c-work-item__content']}>

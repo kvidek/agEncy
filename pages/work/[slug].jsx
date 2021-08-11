@@ -7,6 +7,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
 import Container from '../../components/Container';
+import NextWork from '../../components/NextWork';
 
 const workPost = post => {
     // console.log('post: ', post);
@@ -42,15 +43,7 @@ const workPost = post => {
                         return (
                             <Link key={k} href={post.slug}>
                                 <a>
-                                    <h3 className="u-a3">Next project</h3>
-                                    <p className="u-b0">{subtitle}</p>
-                                    <Image
-                                        alt={title}
-                                        src={image}
-                                        layout="responsive"
-                                        width={320}
-                                        height={240}
-                                    />
+                                    <NextWork title={title} subtitle={subtitle} image={image} />
                                 </a>
                             </Link>
                         );
