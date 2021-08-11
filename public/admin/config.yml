@@ -43,6 +43,24 @@ collections:
       fields:
         - { label: "Title", name: "title", widget: "string", required: true}
         - { label: "Subtitle", name: "subtitle", widget: "text"}
+        - label: "Intro"
+          name: "intro"
+          widget: "object"
+          fields:
+            - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Intro text", name: "intro_text", widget: "text" }
+        - label: "Benefits"
+          name: "benefits"
+          widget: "object"
+          fields:
+            - { label: "Title", name: "title", widget: "string" }
+            - label: "Benefits list"
+              name: "benefits_list"
+              widget: list
+              fields:
+                - { label: "Name", name: "name", widget: "string" }
+                - { label: "Text", name: "text", widget: "text" }
     - label: "Work"
       name: "work"
       file: "content/work.md"

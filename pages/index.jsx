@@ -31,7 +31,7 @@ const Home = ({ postList }) => {
 
             <Container>
                 <WorkList>
-                    <h2 className="u-b0 u-uppercase">Featured work</h2>
+                    <h2 className="u-a3 u-fw-400">Featured work</h2>
                     {featuredPosts &&
                         featuredPosts.map((post, k) => {
                             const { title, subtitle, image } = post.attributes;
