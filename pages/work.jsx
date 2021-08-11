@@ -1,7 +1,6 @@
 import Meta from '../components/Meta';
 import 'isomorphic-fetch';
 import Link from 'next/link';
-import Image from 'next/image';
 import { attributes } from '../content/work.md';
 import importWorkPosts from '../lib/importWorkPosts';
 import Navigation from '../components/Navigation';
