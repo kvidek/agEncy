@@ -1,0 +1,16 @@
+@import '../tools/tools.index';
+@import '../settings/settings.index';
+
+.c-work-list {
+    @include fluidValue("padding-top", "s-96");
+    @include fluidValue("padding-bottom", "s-96");
+
+    a {
+        display: block;
+        @include fluidValue("padding-bottom", "s-48");
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}

@@ -8,6 +8,8 @@ import Navigation from '../components/Navigation';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Container from '../components/Container';
+import WorkList from '../components/WorkList';
+import WorkItem from '../components/WorkItem';
 
 const Home = ({ postList }) => {
     // console.log(attributes);
@@ -28,31 +30,31 @@ const Home = ({ postList }) => {
             <Header variant={'dark'} title={title} subtitle={subtitle} />
 
             <Container>
-                {featuredPosts && (
-                    <ul>
-                        {featuredPosts.map((post, k) => {
+                <WorkList>
+                    {featuredPosts &&
+                        featuredPosts.map((post, k) => {
                             const { title, subtitle, image } = post.attributes;
+
+                            const evenOdd = k => {
+                                return k % 2 ? 'left' : 'right';
+                            };
 
                             return (
                                 <Link key={k} href={`work/${post.slug}`}>
                                     <li key={k}>
                                         <a>
-                                            <h3 className="u-a2">{title}</h3>
-                                            <p className="u-b0">{subtitle}</p>
-                                            <Image
-                                                alt={title}
-                                                src={image}
-                                                layout="responsive"
-                                                width={320}
-                                                height={240}
+                                            <WorkItem
+                                                title={title}
+                                                subtitle={subtitle}
+                                                image={image}
+                                                orientation={evenOdd(k)}
                                             />
                                         </a>
                                     </li>
                                 </Link>
                             );
                         })}
-                    </ul>
-                )}
+                </WorkList>
             </Container>
 
             <Footer />

@@ -8,6 +8,8 @@ import Navigation from '../components/Navigation';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Container from '../components/Container';
+import WorkItem from '../components/WorkItem';
+import WorkList from '../components/WorkList';
 
 const work = ({ postList }) => {
     const { title, subtitle } = attributes;
@@ -21,31 +23,29 @@ const work = ({ postList }) => {
             <Header variant={'dark'} title={title} subtitle={subtitle} />
 
             <Container>
-                {postList && (
-                    <ul>
-                        {postList.map((post, k) => {
+                <WorkList>
+                    {postList &&
+                        postList.map((post, k) => {
                             const { title, subtitle, image } = post.attributes;
+
+                            const evenOdd = k => {
+                                return k % 2 ? 'left' : 'right';
+                            };
 
                             return (
                                 <Link key={k} href={`work/${post.slug}`}>
-                                    <li>
-                                        <a>
-                                            <h3 className="u-a2">{title}</h3>
-                                            <p className="u-b0">{subtitle}</p>
-                                            <Image
-                                                alt={title}
-                                                src={image}
-                                                layout="responsive"
-                                                width={320}
-                                                height={240}
-                                            />
-                                        </a>
-                                    </li>
+                                    <a>
+                                        <WorkItem
+                                            title={title}
+                                            subtitle={subtitle}
+                                            image={image}
+                                            orientation={evenOdd(k)}
+                                        />
+                                    </a>
                                 </Link>
                             );
                         })}
-                    </ul>
-                )}
+                </WorkList>
             </Container>
 
             <Footer />

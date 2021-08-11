@@ -29,7 +29,9 @@ const workPost = post => {
             <Image alt={title} src={image} layout="responsive" width={640} height={420} />
 
             <Container>
-                <div className="u-rt-editor" dangerouslySetInnerHTML={{ __html: post.html }} />
+                {post.html && (
+                    <div className="u-rt-editor" dangerouslySetInnerHTML={{ __html: post.html }} />
+                )}
             </Container>
 
             {nextPost && (

@@ -1,0 +1,44 @@
+@import '../tools/tools.index';
+@import '../settings/settings.index';
+
+.c-work-item {
+    display: flex;
+    align-items: center;
+
+    &--left {
+        flex-direction: row-reverse;
+
+        .c-work-item__content {
+            padding-left: percentage(1/18);
+            padding-right: 0;
+        }
+
+        .c-work-item__image {
+            padding-right: percentage(1/18);
+            padding-left: 0;
+        }
+    }
+
+    &--right {
+        flex-direction: row;
+    }
+
+    &__content {
+        width: percentage(9/18);
+        padding-right: percentage(1/18);
+
+        //overrides
+        h3 {
+            margin-bottom: 0.6em;
+        }
+
+        p {
+            margin-bottom: 1.2em;
+        }
+    }
+    &__image {
+        width: percentage(9/18);
+        padding-left: percentage(1/18);
+
+    }
+}

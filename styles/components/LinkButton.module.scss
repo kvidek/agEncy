@@ -32,6 +32,11 @@
     &__label {
     }
 
+    //modifiers
+    &--small {
+        @include fontSize('b0');
+    }
+
     //state
     &:hover {
         color: lighten($primary-color, 15%);
