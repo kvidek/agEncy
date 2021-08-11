@@ -28,8 +28,6 @@ const work = ({ postList }) => {
                         postList.map((post, k) => {
                             const { title, subtitle, image } = post.attributes;
 
-                            evenOdd(k);
-
                             return (
                                 <Link key={k} href={`work/${post.slug}`}>
                                     <a>

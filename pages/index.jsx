@@ -35,8 +35,6 @@ const Home = ({ postList }) => {
                         featuredPosts.map((post, k) => {
                             const { title, subtitle, image } = post.attributes;
 
-                            evenOdd(k);
-
                             return (
                                 <Link key={k} href={`work/${post.slug}`}>
                                     <li key={k}>
