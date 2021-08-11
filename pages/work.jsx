@@ -24,6 +24,8 @@ const work = ({ postList }) => {
 
             <Container>
                 <WorkList>
+                    <h2 className="u-b0 u-uppercase">Our work</h2>
+
                     {postList &&
                         postList.map((post, k) => {
                             const { title, subtitle, image } = post.attributes;

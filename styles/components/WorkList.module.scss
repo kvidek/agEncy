@@ -5,6 +5,10 @@
     @include fluidValue("padding-top", "s-96");
     @include fluidValue("padding-bottom", "s-96");
 
+    h2 {
+        @include fluidValue("padding-bottom", "s-48");
+    }
+
     a {
         display: block;
         @include fluidValue("padding-bottom", "s-48");

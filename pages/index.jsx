@@ -31,22 +31,21 @@ const Home = ({ postList }) => {
 
             <Container>
                 <WorkList>
+                    <h2 className="u-b0 u-uppercase">Featured work</h2>
                     {featuredPosts &&
                         featuredPosts.map((post, k) => {
                             const { title, subtitle, image } = post.attributes;
 
                             return (
                                 <Link key={k} href={`work/${post.slug}`}>
-                                    <li key={k}>
-                                        <a>
-                                            <WorkItem
-                                                title={title}
-                                                subtitle={subtitle}
-                                                image={image}
-                                                orientation={evenOdd(k)}
-                                            />
-                                        </a>
-                                    </li>
+                                    <a>
+                                        <WorkItem
+                                            title={title}
+                                            subtitle={subtitle}
+                                            image={image}
+                                            orientation={evenOdd(k)}
+                                        />
+                                    </a>
                                 </Link>
                             );
                         })}
