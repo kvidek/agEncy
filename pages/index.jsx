@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 import Container from '../components/Container';
 import WorkList from '../components/WorkList';
 import WorkItem from '../components/WorkItem';
+import evenOdd from '../helpers/evenOdd';
 
 const Home = ({ postList }) => {
     // console.log(attributes);
@@ -34,9 +35,7 @@ const Home = ({ postList }) => {
                         featuredPosts.map((post, k) => {
                             const { title, subtitle, image } = post.attributes;
 
-                            const evenOdd = k => {
-                                return k % 2 ? 'left' : 'right';
-                            };
+                            evenOdd(k);
 
                             return (
                                 <Link key={k} href={`work/${post.slug}`}>

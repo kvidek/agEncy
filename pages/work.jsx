@@ -9,6 +9,7 @@ import Footer from '../components/Footer';
 import Container from '../components/Container';
 import WorkItem from '../components/WorkItem';
 import WorkList from '../components/WorkList';
+import evenOdd from '../helpers/evenOdd';
 
 const work = ({ postList }) => {
     const { title, subtitle } = attributes;
@@ -27,9 +28,7 @@ const work = ({ postList }) => {
                         postList.map((post, k) => {
                             const { title, subtitle, image } = post.attributes;
 
-                            const evenOdd = k => {
-                                return k % 2 ? 'left' : 'right';
-                            };
+                            evenOdd(k);
 
                             return (
                                 <Link key={k} href={`work/${post.slug}`}>
