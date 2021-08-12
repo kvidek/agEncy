@@ -12,9 +12,11 @@ const Form = () => {
                 name="contact"
                 method="POST"
                 data-netlify="true"
+                netlify-honeypot="bot-field"
                 className={styles['c-form']}
             >
                 <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="bot-field" />
                 <FormFieldset>
                     <p className="u-b1 u-fw-700 u-uppercase">Your name</p>
                     <FormInput type={'text'} placeholder={'Enter your name'} />
