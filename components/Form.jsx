@@ -8,7 +8,7 @@ const Form = () => {
     return (
         <div className={styles['c-form-wrapper']}>
             <form
-                action="/?success=true"
+                action="/contact/?success=true"
                 name="contact"
                 method="POST"
                 data-netlify="true"
