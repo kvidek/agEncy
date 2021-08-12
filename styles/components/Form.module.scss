@@ -1,0 +1,74 @@
+@import '../tools/tools.index';
+@import '../settings/settings.index';
+
+.c-form-wrapper {
+    @include fluidValue("padding-top", "s-96");
+    @include fluidValue("padding-bottom", "s-96");
+}
+
+.c-form {
+    max-width: 540px;
+
+    &__fieldset {
+        display: block;
+        @include fluidValue('padding-bottom', 's-30');
+
+        p {
+            @include fluidValue('padding-bottom', 's-10');
+        }
+
+        button {
+            width: auto;
+            min-width: 160px;
+        }
+    }
+
+    &__input,
+    &__textarea {
+        border: 1px solid $disabled-color;
+        border-radius: 0;
+        display: block;
+        width: 100%;
+        outline: none;
+        color: $primary-color;
+        @include fluidValue('padding-bottom', 's-12');
+        @include fluidValue('padding-top', 's-16');
+        @include fluidValue('padding-right', 's-20');
+        @include fluidValue('padding-left', 's-20');
+        transition: $t-default;
+        -webkit-appearance: none;
+
+        &:hover,
+        &:focus {
+            border-color: lighten($primary-color, 25%);
+        }
+
+        &::placeholder {
+            color: $input-color;
+            opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+            color: $input-color;
+        }
+
+        &::-ms-input-placeholder {
+            color: $input-color;
+        }
+    }
+
+    &__input {
+    }
+
+    &__textarea {
+        resize: none;
+    }
+
+    &__input {
+
+    }
+
+    &__textarea {
+
+    }
+}
