@@ -13,6 +13,7 @@ intro:
     When we first started out, our passion for web technologies 
     drove us to focus on learning and creating.
   title: agEncy
+  image: /img/x-max-250.jpeg
 benefits:
   title: Four reasons to  work with us
   benefits_list:
