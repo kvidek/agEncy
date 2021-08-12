@@ -1,0 +1,33 @@
+@import '../tools/tools.index';
+@import '../settings/settings.index';
+
+.c-benefits {
+    @include fluidValue("padding-top", "s-96");
+    @include fluidValue("padding-bottom", "s-48");
+
+    h2 {
+        max-width: 720px;
+        @include fluidValue("padding-bottom", "s-48");
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 840px;
+
+    }
+
+    &__list-item {
+        width: 50%;
+        padding-right: percentage(30/420);
+        @include fluidValue("padding-bottom", "s-48");
+
+        h4 {
+            margin-bottom: 0.8em;
+        }
+
+        p {
+            max-width: 240px;
+        }
+    }
+}

@@ -48,8 +48,9 @@ collections:
           widget: "object"
           fields:
             - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-            - { label: "Title", name: "title", widget: "string" }
             - { label: "Intro text", name: "intro_text", widget: "text" }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Image", name: "image", widget: "image" }
         - label: "Benefits"
           name: "benefits"
           widget: "object"
