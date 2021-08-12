@@ -19,11 +19,11 @@ const Form = () => {
                 <input type="hidden" name="bot-field" />
                 <FormFieldset>
                     <p className="u-b1 u-fw-700 u-uppercase">Your name</p>
-                    <FormInput type={'text'} placeholder={'Enter your name'} />
+                    <FormInput name={'name'} type={'text'} placeholder={'Enter your name'} />
                 </FormFieldset>
                 <FormFieldset>
                     <p className="u-b1 u-fw-700 u-uppercase">Your name</p>
-                    <FormInput type={'email'} placeholder={'Enter your email'} />
+                    <FormInput name={'email'} type={'email'} placeholder={'Enter your email'} />
                 </FormFieldset>
                 <FormFieldset>
                     <p className="u-b1 u-fw-700 u-uppercase">Your message</p>

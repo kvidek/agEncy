@@ -1,8 +1,16 @@
 import styles from '../styles/components/Form.module.scss';
 import PropTypes from 'prop-types';
 
-const FormInput = ({ type, placeholder }) => {
-    return <input type={type} className={styles['c-form__input']} placeholder={placeholder} />;
+const FormInput = ({ name, type, placeholder }) => {
+    return (
+        <input
+            id={name}
+            name={name}
+            type={type}
+            className={styles['c-form__input']}
+            placeholder={placeholder}
+        />
+    );
 };
 
 FormInput.defaultProps = {
