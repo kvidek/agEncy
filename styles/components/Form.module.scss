@@ -72,3 +72,13 @@
 
     }
 }
+
+.c-form-thank-you {
+    @include fluidValue("padding-top", "s-96");
+    @include fluidValue("padding-bottom", "s-96");
+
+    p {
+        max-width: 420px;
+    }
+
+}

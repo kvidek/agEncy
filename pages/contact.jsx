@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Container from '../components/Container';
 import Form from '../components/Form';
+import styles from '../styles/components/Form.module.scss';
 
 const contact = () => {
     let { title, subtitle } = attributes;
@@ -28,9 +29,11 @@ const contact = () => {
 
             <Container>
                 {success ? (
-                    <p className="u-a1" style={{ color: 'green' }}>
-                        Thank you! Your message was sent and we will reply asap...
-                    </p>
+                    <div className={styles['c-form-thank-you']}>
+                        <p className="u-b0" style={{ color: 'green' }}>
+                            Thank you! Your message was sent and we will reply asap...
+                        </p>
+                    </div>
                 ) : (
                     <Form />
                 )}
