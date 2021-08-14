@@ -24,7 +24,7 @@ const work = ({ postList }) => {
 
             <Container>
                 <WorkList>
-                    <h2 className="u-b0 u-uppercase">Our work</h2>
+                    <h2 className="u-a3 u-fw-400">Our work</h2>
 
                     {postList &&
                         postList.map((post, k) => {
