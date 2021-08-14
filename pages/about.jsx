@@ -17,7 +17,7 @@ const about = () => {
 
             <Header variant={'light'} title={title} subtitle={subtitle} />
 
-            <Intro intro={intro} />
+            {intro && <Intro intro={intro} />}
 
             <Benefits benefits={benefits} />
 

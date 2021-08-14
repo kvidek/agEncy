@@ -9,13 +9,14 @@ import Footer from '../components/Footer';
 import Container from '../components/Container';
 import WorkList from '../components/WorkList';
 import WorkItem from '../components/WorkItem';
+import Intro from '../components/Intro';
 import evenOdd from '../helpers/evenOdd';
 
 const Home = ({ postList }) => {
     // console.log(attributes);
     // console.log(postList);
 
-    const { title, subtitle, featured_work } = attributes;
+    const { title, subtitle, intro, featured_work } = attributes;
 
     const featuredPosts = postList.filter(post => featured_work.includes(post.attributes.slug));
 
@@ -28,6 +29,8 @@ const Home = ({ postList }) => {
             <Navigation />
 
             <Header variant={'dark'} title={title} subtitle={subtitle} />
+
+            {intro && <Intro intro={intro} />}
 
             <Container>
                 <WorkList>

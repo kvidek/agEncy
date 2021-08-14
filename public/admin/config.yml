@@ -28,6 +28,14 @@ collections:
       fields:
         - { label: "Title", name: "title", widget: "string", required: true}
         - { label: "Subtitle", name: "subtitle", widget: "text"}
+        - label: "Intro"
+          name: "intro"
+          widget: "object"
+          fields:
+            - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+            - { label: "Intro text", name: "intro_text", widget: "text" }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Image", name: "image", widget: "image" }
         - label: "Featured work"
           name: "featured_work"
           widget: "relation"
