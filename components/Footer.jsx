@@ -10,7 +10,7 @@ const Footer = ({ showCta }) => {
     const { site_credits, social_networks } = attributes;
 
     return (
-        <footer className={styles['o-footer']}>
+        <footer className={`${styles['o-footer']} ${showCta ? '' : styles['o-footer--no-cta']}`}>
             <div className={styles['c-footer']}>
                 {showCta && (
                     <div className={styles['c-footer__top']}>

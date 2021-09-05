@@ -19,15 +19,25 @@ const Form = () => {
                 <input type="hidden" name="bot-field" />
                 <FormFieldset>
                     <p className="u-b1 u-fw-700 u-uppercase">Your name</p>
-                    <FormInput name={'name'} type={'text'} placeholder={'Enter your name'} />
+                    <FormInput
+                        name={'name'}
+                        type={'text'}
+                        placeholder={'Enter your name'}
+                        required={true}
+                    />
                 </FormFieldset>
                 <FormFieldset>
-                    <p className="u-b1 u-fw-700 u-uppercase">Your name</p>
-                    <FormInput name={'email'} type={'email'} placeholder={'Enter your email'} />
+                    <p className="u-b1 u-fw-700 u-uppercase">Your email</p>
+                    <FormInput
+                        name={'email'}
+                        type={'email'}
+                        placeholder={'Enter your email'}
+                        required={true}
+                    />
                 </FormFieldset>
                 <FormFieldset>
                     <p className="u-b1 u-fw-700 u-uppercase">Your message</p>
-                    <FormTextarea placeholder={'Enter your message'} />
+                    <FormTextarea placeholder={'Enter your message'} required={true} />
                 </FormFieldset>
                 <FormFieldset>
                     <Button type={'submit'} label={'Send'} variant={'primary'} />

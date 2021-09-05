@@ -14,8 +14,12 @@ const contact = () => {
     const [success, setSuccess] = useState(false);
 
     useEffect(() => {
-        if (window.location.search.includes('success=true')) {
+        const successParam = 'success';
+
+        if (window.location.search.includes(`${successParam}=true`)) {
             setSuccess(true);
+
+            setTimeout(() => {}, 3000);
         }
     }, []);
 
@@ -28,14 +32,13 @@ const contact = () => {
             <Header variant={'dark'} title={title} subtitle={subtitle} />
 
             <Container>
-                {success ? (
+                <Form />
+                {success && (
                     <div className={styles['c-form-thank-you']}>
                         <p className="u-b0" style={{ color: 'green' }}>
                             Thank you! Your message was sent and we will reply asap...
                         </p>
                     </div>
-                ) : (
-                    <Form />
                 )}
             </Container>
 

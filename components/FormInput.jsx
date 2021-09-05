@@ -1,7 +1,7 @@
 import styles from '../styles/components/Form.module.scss';
 import PropTypes from 'prop-types';
 
-const FormInput = ({ name, type, placeholder }) => {
+const FormInput = ({ name, type, placeholder, required }) => {
     return (
         <input
             id={name}
@@ -9,6 +9,7 @@ const FormInput = ({ name, type, placeholder }) => {
             type={type}
             className={styles['c-form__input']}
             placeholder={placeholder}
+            required={required}
         />
     );
 };

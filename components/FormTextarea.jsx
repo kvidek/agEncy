@@ -1,7 +1,7 @@
 import styles from '../styles/components/Form.module.scss';
 import PropTypes from 'prop-types';
 
-const FormTextarea = ({ placeholder }) => {
+const FormTextarea = ({ placeholder, required }) => {
     return (
         <textarea
             name="custom-message"
@@ -10,6 +10,7 @@ const FormTextarea = ({ placeholder }) => {
             rows="8"
             className={styles['c-form__textarea']}
             placeholder={placeholder}
+            required={required}
         ></textarea>
     );
 };

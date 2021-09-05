@@ -3,6 +3,11 @@
 
 .o-footer {
     background-color: $light-grey;
+
+    //modifiers
+    &--no-cta {
+        background-color: $white;
+    }
 }
 
 .c-footer {
