@@ -19,9 +19,12 @@ const contact = () => {
         if (window.location.search.includes(`${successParam}=true`)) {
             setSuccess(true);
 
-            setTimeout(() => {}, 3000);
+            setTimeout(() => {
+                setSuccess(false);
+                window.history.pushState({}, document.title, window.location.pathname);
+            }, 5000);
         }
-    }, []);
+    });
 
     return (
         <>
@@ -32,13 +35,14 @@ const contact = () => {
             <Header variant={'dark'} title={title} subtitle={subtitle} />
 
             <Container>
-                <Form />
-                {success && (
+                {success ? (
                     <div className={styles['c-form-thank-you']}>
-                        <p className="u-b0" style={{ color: 'green' }}>
+                        <p className="u-a1" style={{ color: 'green' }}>
                             Thank you! Your message was sent and we will reply asap...
                         </p>
                     </div>
+                ) : (
+                    <Form />
                 )}
             </Container>
 
