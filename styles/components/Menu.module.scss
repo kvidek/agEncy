@@ -23,6 +23,10 @@
             @include fluidValue("padding", "s-8");
             transition: $t-default;
 
+            @include mq(md) {
+                @include fluidValue("padding", "s-4");
+            }
+
             &:hover {
                 opacity: 0.8;
             }

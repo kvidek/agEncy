@@ -11,9 +11,19 @@
     @include fluidValue("padding-top", "s-64");
     @include fluidValue("padding-bottom", "s-64");
 
+    @include mq(md) {
+        flex-direction: column;
+        padding-left: percentage(1/24);
+    }
+
     &__content {
         width: percentage(12/20);
         padding-right: percentage(1/20);
+
+        @include mq(md) {
+            width: 100%;
+            padding-right: 0;
+        }
 
         p {
             max-width: 420px;
@@ -23,5 +33,11 @@
     &__image {
         width: percentage(9/20);
         padding-left: percentage(1/20);
+
+        @include mq(md) {
+            width: 100%;
+            padding-left: 0;
+            @include fluidValue("margin-top", "s-56");
+        }
     }
 }

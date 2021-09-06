@@ -19,6 +19,11 @@
         padding-left: percentage(3/24);
         padding-right: percentage(3/24);
 
+        @include mq(md) {
+            padding-left: percentage(1/24);
+            padding-right: percentage(1/24);
+        }
+
         h1 {
             max-width: 780px;
             @include fluidValue('padding-bottom', 's-20');

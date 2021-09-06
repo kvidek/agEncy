@@ -5,6 +5,10 @@
     &__logo {
         transition: $t-default;
 
+        svg {
+            display: block;
+        }
+
         &:hover {
             opacity: 0.8;
         }

@@ -2,6 +2,7 @@
  * Breakpoints
  */
 $breakpoint-sm: 480px;
+$breakpoint-sm-md: 600px;
 $breakpoint-md: 800px;
 $breakpoint-lg: 1140px;
 $breakpoint-xl: 1440px;
@@ -12,6 +13,7 @@ $breakpoint-xxl: 4000px;
  */
 $settings-breakpoints: (
     'sm': $breakpoint-sm,
+    'sm-md': $breakpoint-sm-md,
     'md': $breakpoint-md,
     'lg': $breakpoint-lg,
     'xl': $breakpoint-xl,

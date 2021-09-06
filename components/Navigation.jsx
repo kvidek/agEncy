@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import styles from '../styles/components/Navigation.module.scss';
 import Logo from './Logo';
 import Menu from './Menu';

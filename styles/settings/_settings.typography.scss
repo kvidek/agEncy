@@ -17,15 +17,15 @@ $font-secondary: $calibre-bold;
  */
 $settings-typography: (
     'a3': (
-        $breakpoint-sm: 90px,
+        $breakpoint-sm: 90px * 0.5,
         $breakpoint-xl: 90px,
     ),
     'a2': (
-        $breakpoint-sm: 27px,
+        $breakpoint-sm: 27px * 0.6,
         $breakpoint-xl: 27px,
     ),
     'a1': (
-        $breakpoint-sm: 35px,
+        $breakpoint-sm: 35px * 0.6,
         $breakpoint-xl: 35px,
     ),
     'b0': (

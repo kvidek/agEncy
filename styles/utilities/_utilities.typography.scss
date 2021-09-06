@@ -9,6 +9,10 @@
     &.u-fw-400 {
         font-family: $font-primary;
     }
+
+    @include mq(md) {
+        line-height: 90%;
+    }
 }
 
 .u-a2 {

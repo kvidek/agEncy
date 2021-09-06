@@ -17,6 +17,11 @@
         padding-left: percentage(3/24);
         padding-right: percentage(3/24);
 
+        @include mq(md) {
+            padding-left: percentage(1/24);
+            padding-right: percentage(1/24);
+        }
+
         h4 {
             max-width: 780px;
             @include fluidValue('padding-bottom', 's-20');
@@ -36,6 +41,12 @@
         padding-right: percentage(1/24);
         display: flex;
         flex-wrap: wrap;
+
+        @include mq(md) {
+            width: 100%;
+            padding-left: percentage(1/24);
+            padding-right: percentage(1/24);
+        }
     }
 
     &__credits {
