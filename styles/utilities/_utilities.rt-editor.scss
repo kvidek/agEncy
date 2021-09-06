@@ -123,6 +123,12 @@
         margin-bottom: 2.4em;
         width: calc(100% + 60px);
         max-width: calc(100% + 60px);
+
+        @include mq(md) {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     blockquote {

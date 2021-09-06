@@ -5,7 +5,7 @@ import styles from '../styles/components/Menu.module.scss';
 
 const Menu = ({ type }) => {
     return (
-        <ul className={`${styles['c-menu']} ${type ? 'c-menu--' + type : ' '}`}>
+        <ul className={`${styles['c-menu']} ${type ? styles['c-menu--' + type] : ' '}`}>
             <li className={styles['c-menu__item']}>
                 <Link href="/about">
                     <a>
