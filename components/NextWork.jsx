@@ -9,7 +9,7 @@ const NextWork = ({ title, subtitle, image }) => {
                 <p className="u-b0">{subtitle}</p>
             </div>
             <div className={styles['c-next-work__image']}>
-                <Image alt={title} src={image} layout="responsive" width={320} height={240} />
+                <Image alt={title} src={image} layout="responsive" width={320} height={200} />
             </div>
         </div>
     );

@@ -12,7 +12,7 @@ const WorkItem = ({ eyebrow, title, subtitle, image, orientation }) => {
                 <LinkButton label={'View project'} variant={'small'} />
             </div>
             <div className={styles['c-work-item__image']}>
-                <Image alt={title} src={image} layout="responsive" width={320} height={240} />
+                <Image alt={title} src={image} layout="responsive" width={320} height={200} />
             </div>
         </div>
     );

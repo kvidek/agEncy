@@ -14,7 +14,7 @@ const Intro = ({ intro }) => {
                 </div>
             </Container>
             {image && (
-                <Image alt={title} src={image} layout="responsive" width={640} height={420} />
+                <Image alt={title} src={image} layout="responsive" width={640} height={340} />
             )}
         </>
     );
