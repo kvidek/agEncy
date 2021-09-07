@@ -3,7 +3,6 @@ import 'isomorphic-fetch';
 import Link from 'next/link';
 import { attributes } from '../content/home.md';
 import importWorkPosts from '../lib/importWorkPosts';
-import Navigation from '../components/Navigation';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Container from '../components/Container';
@@ -25,8 +24,6 @@ const Home = ({ postList }) => {
             <Head title={'agEncy'}>
                 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
             </Head>
-
-            <Navigation />
 
             <Header variant={'dark'} title={title} subtitle={subtitle} />
 

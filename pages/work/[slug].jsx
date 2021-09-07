@@ -2,7 +2,6 @@ import Meta from '../../components/Meta';
 import Image from 'next/image';
 import 'isomorphic-fetch';
 import importWorkPosts from '../../lib/importWorkPosts';
-import Navigation from '../../components/Navigation';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
@@ -23,8 +22,6 @@ const workPost = post => {
         <>
             <Meta title={title} />
 
-            <Navigation variant={'dark'} />
-
             <Header variant={'light'} title={title} subtitle={subtitle} />
 
             <Image alt={title} src={image} layout="responsive" width={640} height={420} />
@@ -36,7 +33,7 @@ const workPost = post => {
             </Container>
 
             {nextPost && (
-                <div>
+                <>
                     {nextPost.map((post, k) => {
                         const { title, subtitle, image } = post.attributes;
 
@@ -48,7 +45,7 @@ const workPost = post => {
                             </Link>
                         );
                     })}
-                </div>
+                </>
             )}
 
             <Footer />

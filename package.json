@@ -14,10 +14,12 @@
     "license": "ISC",
     "dependencies": {
         "@bornfight/b-reset": "^1.0.8",
+        "gsap": "^3.7.1",
         "isomorphic-fetch": "^3.0.0",
         "next": "^11.0.1",
         "react": "^17.0.2",
-        "react-dom": "^17.0.2"
+        "react-dom": "^17.0.2",
+        "react-transition-group": "^4.4.2"
     },
     "devDependencies": {
         "@babel/core": "^7.14.8",

@@ -1,7 +1,6 @@
 import Meta from '../components/Meta';
 import { attributes } from '../content/contact.md';
 import { useState, useEffect } from 'react';
-import Navigation from '../components/Navigation';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Container from '../components/Container';
@@ -29,8 +28,6 @@ const contact = () => {
     return (
         <>
             <Meta title="Contact" />
-
-            <Navigation />
 
             <Header variant={'dark'} title={title} subtitle={subtitle} />
 

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import styles from '../styles/components/MobileNavigation.module.scss';
 import Menu from './Menu';
-import Logo from './Logo';
 
 const MobileNavigation = () => {
     const [showMobileNavigation, setShowMobileNavigation] = useState(false);

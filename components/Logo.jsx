@@ -4,7 +4,7 @@ import styles from '../styles/components/Logo.module.scss';
 const Logo = () => {
     return (
         <div className={styles['c-logo']}>
-            <Link href="/">
+            <Link href="/" scroll={false}>
                 <a className={styles['c-logo__logo']}>
                     <svg
                         width="79"
