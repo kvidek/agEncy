@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import '../tools/tools.index';
 @import '../settings/settings.index';
 
@@ -9,8 +11,8 @@
   left: 100%;
   top: 0;
   background-color: $primary-color;
-  padding: 120px percentage(1/24) 20px percentage(1/24);
   z-index: getZindex("navigation", -1);
+  padding: 120px percentage(math.div(1, 24)) 20px percentage(math.div(1, 24));
   transition: $t-default;
 
   &--opened {
@@ -38,7 +40,7 @@
 
   @include mq(sm-md) {
     display: flex;
-    right: percentage(1/24);
+    right: percentage(math.div(1, 24));
     top: 10px;
   }
 

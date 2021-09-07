@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import '../tools/tools.index';
 @import '../settings/settings.index';
 
@@ -17,7 +19,7 @@
         }
 
         .c-work-item__content {
-            padding-left: percentage(1/18);
+            padding-left: percentage(math.div(1, 18));
             padding-right: 0;
 
             @include mq(sm-md) {
@@ -26,7 +28,7 @@
         }
 
         .c-work-item__image {
-            padding-right: percentage(1/18);
+            padding-right: percentage(math.div(1, 18));
             padding-left: 0;
 
             @include mq(sm-md) {
@@ -44,8 +46,8 @@
     }
 
     &__content {
-        width: percentage(9/18);
-        padding-right: percentage(1/18);
+        width: percentage(math.div(9, 18));
+        padding-right: percentage(math.div(1, 18));
 
         @include mq(sm-md) {
             width: 100%;
@@ -62,8 +64,8 @@
         }
     }
     &__image {
-        width: percentage(9/18);
-        padding-left: percentage(1/18);
+        width: percentage(math.div(9, 18));
+        padding-left: percentage(math.div(1, 18));
 
         @include mq(sm-md) {
             width: 100%;

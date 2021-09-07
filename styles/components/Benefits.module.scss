@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import '../tools/tools.index';
 @import '../settings/settings.index';
 
@@ -19,7 +21,7 @@
 
     &__list-item {
         width: 50%;
-        padding-right: percentage(30/420);
+        padding-right: percentage(math.div(30, 420));
         @include fluidValue("padding-bottom", "s-48");
 
         h4 {

@@ -1,9 +1,11 @@
+@use "sass:math";
+
 @import '../tools/tools.index';
 @import '../settings/settings.index';
 
 .c-next-work {
-    padding-left: percentage(3/24);
-    padding-right: percentage(1/24);
+    padding-left: percentage(math.div(3, 24));
+    padding-right: percentage(math.div(1, 24));
     display: flex;
     align-items: center;
     background-color: $primary-color;
@@ -13,12 +15,12 @@
 
     @include mq(md) {
         flex-direction: column;
-        padding-left: percentage(1/24);
+        padding-left: percentage(math.div(1, 24));
     }
 
     &__content {
-        width: percentage(12/20);
-        padding-right: percentage(1/20);
+        width: percentage(12*0.05);
+        padding-right: percentage(1*0.05);
 
         @include mq(md) {
             width: 100%;
@@ -31,8 +33,8 @@
     }
 
     &__image {
-        width: percentage(9/20);
-        padding-left: percentage(1/20);
+        width: percentage(9*0.05);
+        padding-left: percentage(1*0.05);
 
         @include mq(md) {
             width: 100%;

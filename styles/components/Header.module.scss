@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import '../tools/tools.index';
 @import '../settings/settings.index';
 
@@ -16,13 +18,13 @@
     &__heading {
         @include fluidValue('padding-top', 's-96');
         @include fluidValue('padding-bottom', 's-96');
-        padding-left: percentage(3/24);
-        padding-right: percentage(3/24);
+        padding-left: percentage(math.div(3, 24));
+        padding-right: percentage(math.div(3, 24));
 
         @include mq(md) {
             padding-top: 120px;
-            padding-left: percentage(1/24);
-            padding-right: percentage(1/24);
+            padding-left: percentage(math.div(1, 24));
+            padding-right: percentage(math.div(1, 24));
         }
 
         h1 {

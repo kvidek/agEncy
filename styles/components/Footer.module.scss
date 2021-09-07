@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import '../tools/tools.index';
 @import '../settings/settings.index';
 
@@ -14,12 +16,12 @@
     &__top {
         @include fluidValue("padding-top", "s-96");
         @include fluidValue("padding-bottom", "s-96");
-        padding-left: percentage(3/24);
-        padding-right: percentage(3/24);
+        padding-left: percentage(math.div(3, 24));
+        padding-right: percentage(math.div(3, 24));
 
         @include mq(md) {
-            padding-left: percentage(1/24);
-            padding-right: percentage(1/24);
+            padding-left: percentage(math.div(1, 24));
+            padding-right: percentage(math.div(1, 24));
         }
 
         h4 {
@@ -34,19 +36,19 @@
     &__bottom-left {
         @include fluidValue("padding-top", "s-96");
         @include fluidValue("padding-bottom", "s-48");
-        width: percentage(12/24);
+        width: percentage(math.div(12, 24));
         background-color: $primary-color;
         color: $white;
-        padding-left: percentage(3/24);
-        padding-right: percentage(1/24);
+        padding-left: percentage(math.div(3, 24));
+        padding-right: percentage(math.div(1, 24));
         display: flex;
         flex-wrap: wrap;
 
         @include mq(md) {
             width: 100%;
             min-height: 375px;
-            padding-left: percentage(1/24);
-            padding-right: percentage(1/24);
+            padding-left: percentage(math.div(1, 24));
+            padding-right: percentage(math.div(1, 24));
         }
     }
 
