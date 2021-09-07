@@ -7,7 +7,7 @@ subtitle: >+
   Alliance, the world’s largest airline alliance.
 
 image: /img/bornfight_case_dreamscapes_01.webp
-next_work: yamaha-xsr-700
+next_work: getz
 ---
 ### Five-star airliner
 
