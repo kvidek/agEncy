@@ -11,8 +11,8 @@ intro:
     Founded in 2020 by a team of digital enthusiasts, agEncy represents a creative agency that helps businesses and individuals enhance or create their digital presence and strategy. 
   title: agEncy
   eyebrow: How we roll at agEncy?
-  image: /img/yamaha-xsr-700.jpeg
+  image: /img/homepage-highlight.webp
 featured_work:
-  - yamaha-x-max-250
-  - yamaha-xsr-700
+  - getz
+  - lufthansa-dreamscapes
 ---
